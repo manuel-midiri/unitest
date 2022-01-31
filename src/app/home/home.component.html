@@ -1,0 +1,22 @@
+<div>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="container">
+    <div class="item">
+      <label for="name">Inserisci nome</label>
+      <input type="text" formControlName="name">
+    </div>
+    <div class="item">
+      <label for="surname">Inserisci cognome</label>
+      <input type="text" formControlName="surname">
+    </div>
+    <div class="item">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email">
+    </div>
+    <div class="item">
+      <label for="number">Numero</label>
+      <input type="number" formControlName="number">
+    </div>
+    <button type="submit" [disabled]="!userForm.valid">Invia</button>
+  </form>
+</div>
+<button routerLink="/radio">Radio</button>
