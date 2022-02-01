@@ -4,11 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 import {TestbedHarnessEnvironment} from '@angular/cdk/testing/testbed';
-import {
-  BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting,
-} from '@angular/platform-browser-dynamic/testing';
-import { MatRadioButtonHarness, MatRadioGroupHarness } from '@angular/material/radio/testing';
+import { MatRadioGroupHarness } from '@angular/material/radio/testing';
 import { HarnessLoader } from '@angular/cdk/testing';
 import { RadioBtnComponent } from './radio-btn.component';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -36,9 +32,9 @@ describe('RadioBtnComponent', () => {
   //   component = fixture.componentInstance;
   // });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  xit('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
   it('should load all radio-group harnesses',async () => {
     const groups = await loader.getAllHarnesses(MatRadioGroupHarness);

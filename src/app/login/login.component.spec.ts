@@ -6,42 +6,42 @@ import { AuthService } from '../services/auth.service';
 import { LoginComponent } from './login.component';
 
 //JASMINE e KARMA
-// describe('LoginComponent', () => {
-//   let component: LoginComponent;
-//   let service: AuthService;
-//   let spy: any;
+describe('LoginComponent', () => {
+  let component: LoginComponent;
+  let service: AuthService;
+  let spy: any;
 
-//   beforeEach(() => {
-//     service = new AuthService();
-//     component = new LoginComponent(service);
-//   });
+  beforeEach(() => {
+    service = new AuthService();
+    component = new LoginComponent(service);
+  });
 
-//   afterEach(() => { (2)
-//     localStorage.removeItem('token');
-//   });
+  afterEach(() => { (2)
+    localStorage.removeItem('token');
+  });
   
-//   //LOGIN COMPONENT
-//   it('needsLogin returns true when the user has not been authenticated', () => {
-//     expect(component.needsLogin()).toBeTruthy();
-//   });
+  //LOGIN COMPONENT
+  xit('needsLogin returns true when the user has not been authenticated', () => {
+    expect(component.needsLogin()).toBeTruthy();
+  });
 
-//   it('needsLogin returns false when the user has been authenticated', () => {
-//     localStorage.setItem('token', '12345'); (3)
-//     expect(component.needsLogin()).toBeFalsy();
-//   });
+  xit('needsLogin returns false when the user has been authenticated', () => {
+    localStorage.setItem('token', '12345'); (3)
+    expect(component.needsLogin()).toBeFalsy();
+  });
 
-//   it('needsLogin returns true when the user has not been authenticated', () => {
-//     spy = spyOn(service, 'isAuthenticated').and.returnValue(false);
-//     expect(component.needsLogin()).toBeTruthy();
-//     expect(service.isAuthenticated).toHaveBeenCalled();
-//   });
+  xit('needsLogin returns true when the user has not been authenticated', () => {
+    spy = spyOn(service, 'isAuthenticated').and.returnValue(false);
+    expect(component.needsLogin()).toBeTruthy();
+    expect(service.isAuthenticated).toHaveBeenCalled();
+  });
 
-//   it('needsLogin returns false when the user has been authenticated', () => {
-//       spy = spyOn(service, 'isAuthenticated').and.returnValue(true);
-//       expect(component.needsLogin()).toBeFalsy();
-//       expect(service.isAuthenticated).toHaveBeenCalled();
-//   });
-// });
+  xit('needsLogin returns false when the user has been authenticated', () => {
+      spy = spyOn(service, 'isAuthenticated').and.returnValue(true);
+      expect(component.needsLogin()).toBeFalsy();
+      expect(service.isAuthenticated).toHaveBeenCalled();
+  });
+});
 
 //ATB
 describe('Component: Login', () => {

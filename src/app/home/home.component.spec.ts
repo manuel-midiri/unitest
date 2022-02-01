@@ -5,7 +5,7 @@ import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core
 import * as Rx from 'rxjs';
 
 import { HomeComponent } from './home.component';
-import { FormModel, User } from '../models/jsonPlaceholder';
+import { FormModel } from '../models/jsonPlaceholder';
 import { delay } from 'rxjs';
 
 describe('HomeComponent', () => {
