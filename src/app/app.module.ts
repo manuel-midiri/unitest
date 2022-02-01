@@ -10,12 +10,16 @@ import { RadioBtnComponent } from './radio-btn/radio-btn.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MatNativeDateModule } from '@angular/material/core';
+import { LoginComponent } from './login/login.component';
+import { DefaultPipe } from './pipe/default.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
       HomeComponent,
-      RadioBtnComponent
+      RadioBtnComponent,
+      LoginComponent,
+      DefaultPipe
    ],
   imports: [
     BrowserModule,

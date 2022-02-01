@@ -18,9 +18,9 @@ describe('RadioBtnComponent', () => {
   let fixture: ComponentFixture<RadioBtnComponent>;
   let loader: HarnessLoader;
 
-  beforeAll(() => {
-    TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
-  });
+  // beforeAll(() => {
+  //   TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
+  // });
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -36,19 +36,18 @@ describe('RadioBtnComponent', () => {
   //   component = fixture.componentInstance;
   // });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  // it('should load all radio-group harnesses',async () => {
-  //   const groups = await loader.getAllHarnesses(MatRadioGroupHarness);
-  //   expect(groups.length).toBe(1);
+  // it('should create', () => {
+  //   expect(component).toBeTruthy();
   // });
+
+  it('should load all radio-group harnesses',async () => {
+    const groups = await loader.getAllHarnesses(MatRadioGroupHarness);
+    expect(groups.length).toBe(1);
+  });
 
   it('should get name of radio-group', async () => {
     const group = await loader.getHarness(MatRadioGroupHarness);
     const name = await group.getName();
     expect(name).toBe('flavors');
   });
-
 });

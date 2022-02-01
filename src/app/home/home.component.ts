@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   getUserForm: Subject<FormModel> = new Subject<FormModel>();
   usersDetail: User[] = [];
   showLoadingIndicator: boolean = true;
+  image: string = "";
 
   constructor(private fb: FormBuilder, private jsonPlaceholderService: JsonPlaceholderService) { }
 
